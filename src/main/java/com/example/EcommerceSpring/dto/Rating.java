@@ -7,6 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CategoryDTO {
-    private String name;
+public class Rating {
+	private double rate;
+	private int count;
 }

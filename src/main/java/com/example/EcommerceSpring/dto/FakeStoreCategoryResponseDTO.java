@@ -11,8 +11,8 @@ import java.util.List;
 @AllArgsConstructor
 public class FakeStoreCategoryResponseDTO {
 
-    private String status;
-    private String message;
+//    private String status;
+//    private String message;
 
     private List<String> categories;
 

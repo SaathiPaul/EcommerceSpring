@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -22,15 +21,10 @@ public class CategoryController {
     }
 
     @GetMapping
-    public List<CategoryDTO> getCategories() throws IOException
+    public ResponseEntity<List<CategoryDTO>> getAllCategoriesController() throws IOException
     {
-        List<CategoryDTO> list =  this.categoryService.getAllCategories();
-        return list;
-    }
-
-    @GetMapping("/vivek")
-    public ResponseEntity<String> love() {
-        return ResponseEntity.status(201).body("Vivek");
+        List<CategoryDTO> result =  this.categoryService.getAllCategories();
+        return ResponseEntity.ok(result);
     }
 
 }

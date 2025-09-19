@@ -14,7 +14,7 @@ public class EcommerceSpringApplication {
         dotenv.entries().forEach(
                 entry -> System.setProperty(entry.getKey() , entry.getValue())
         );
-        SpringApplication.run(EcommerceSpringApplication.class, args);
+        SpringApplication.run(EcommerceSpringApplication.class, args); // think as it starts the routing layer
 	}
 
 }
