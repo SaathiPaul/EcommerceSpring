@@ -46,17 +46,10 @@ public class FakeStoreCategoryGateway implements ICategoryGateway {
             CategoryDTO dto = new CategoryDTO();
             dto.setName(singleCategory);
             list.add(dto);
-//            CategoryDTO dto = CategoryDTO.builder().name(singleCategory).build();
+
         }
-
-//        CategoryDTO dto = CategoryDTO.builder().name("gaming").build();
-//        CategoryDTO dto1 = CategoryDTO.builder().name("cloth").build();
-//        CategoryDTO dto2 = CategoryDTO.builder().name("cosmetics").build();
-//
-//        list.add(dto);
-//        list.add(dto1);
-//        list.add(dto2);
-
         return list;
+
+        // return GetAllCategoriesMapper.toCategoryDto(response);
     }
 }

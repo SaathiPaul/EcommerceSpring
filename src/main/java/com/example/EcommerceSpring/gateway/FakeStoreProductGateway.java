@@ -2,6 +2,7 @@ package com.example.EcommerceSpring.gateway;
 
 import com.example.EcommerceSpring.dto.FakeStoreProductResponseDTO;
 import com.example.EcommerceSpring.dto.ProductDTO;
+import com.example.EcommerceSpring.dto.Rating;
 import com.example.EcommerceSpring.gateway.api.FakeStoreProductApi;
 import org.springframework.stereotype.Component;
 
@@ -25,7 +26,12 @@ public class FakeStoreProductGateway implements IProductGateway {
         }
         ProductDTO dto = new ProductDTO();
 
-        dto.setCategory(response.getCategory());
+        dto.setId(response.getId());
+        dto.setTitle(response.getTitle());
+        dto.setPrice(response.getPrice());
+        dto.setDescription(response.getDescription());
+//        dto.setCategory(response.getCategory());
+        dto.setImage(response.getImage());
         dto.setRating(response.getRating());
 
 
@@ -33,3 +39,4 @@ public class FakeStoreProductGateway implements IProductGateway {
     }
 
 }
+
