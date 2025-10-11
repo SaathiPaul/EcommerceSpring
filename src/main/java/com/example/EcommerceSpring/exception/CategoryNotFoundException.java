@@ -1,7 +1,7 @@
 package com.example.EcommerceSpring.exception;
 
 public class CategoryNotFoundException extends RuntimeException{
-    public ProductNotFoundException(String message) {
+    public  CategoryNotFoundException(String message) {
         super(message);
     }
 

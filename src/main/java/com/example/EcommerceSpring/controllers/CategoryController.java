@@ -20,7 +20,7 @@ public class CategoryController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllCategoriesController(@RequestParam(required = false) String name) throws IOException
+    public ResponseEntity<?> getAllCategoriesController(@RequestParam(required = false) String name) throws Exception
     {
         if(name != null && !name.isBlank())
         {

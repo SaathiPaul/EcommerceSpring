@@ -15,7 +15,6 @@ import lombok.*;
 @Builder
 public class Product extends BaseEntity{
 
-//    private long id;
     private String title;
     private double price;
     private String description;

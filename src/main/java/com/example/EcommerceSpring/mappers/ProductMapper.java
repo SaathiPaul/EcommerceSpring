@@ -23,7 +23,7 @@ public class ProductMapper {
     public static Product toEntity(ProductDTO dto , Category category)
     {
         return Product.builder()
-                .id(dto.getId())
+//                .id(dto.getId())
                 .title(dto.getTitle())
                 .price(dto.getPrice())
                 .description(dto.getDescription())

@@ -28,7 +28,6 @@ public class FakeStoreCategoryGateway implements ICategoryGateway {
 
 
         System.out.println(response);
-        System.out.println("vivek");
 
         //2. check if the response is null and throw an IOException if it is
         if(response == null) //[]
