@@ -1,6 +1,5 @@
 package com.example.EcommerceSpring.entity;
 
-import com.example.EcommerceSpring.dto.Rating;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -13,13 +12,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product extends BaseEntity{
+public class Product extends BaseEntity {
 
     private String title;
     private double price;
     private String description;
     private String image;
-    private Rating rating;
+//    private Rating rating;
 
     //Each product belongs to one category
     //One category can have many products

@@ -4,7 +4,6 @@ import com.example.EcommerceSpring.dto.ProductDTO;
 import com.example.EcommerceSpring.dto.ProductWithCategoryDTO;
 import com.example.EcommerceSpring.entity.Category;
 import com.example.EcommerceSpring.entity.Product;
-//import jdk.jfr.Category;
 
 public class ProductMapper {
     public static ProductDTO toDto(Product product)
@@ -16,7 +15,7 @@ public class ProductMapper {
                 .description(product.getDescription())
                 .categoryId(product.getCategory().getId())
                 .image(product.getImage())
-                .rating(product.getRating())
+//                .rating(product.getRating())
                 .build();
     }
 
@@ -28,7 +27,7 @@ public class ProductMapper {
                 .price(dto.getPrice())
                 .description(dto.getDescription())
                 .image(dto.getImage())
-                .rating(dto.getRating())
+//                .rating(dto.getRating())
                 .category(category)
                 .build();
     }
@@ -42,7 +41,7 @@ public class ProductMapper {
                 .description(product.getDescription())
                 .categoryId(product.getCategory().getId())
                 .image(product.getImage())
-                .rating(product.getRating())
+//                .rating(product.getRating())
                 .category(CategoryMapper.toDto(product.getCategory()))
                 .build();
     }

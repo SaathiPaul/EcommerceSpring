@@ -11,7 +11,6 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class ProductWithCategoryDTO {
-
     private Long id;
     private String title;
     private double price;

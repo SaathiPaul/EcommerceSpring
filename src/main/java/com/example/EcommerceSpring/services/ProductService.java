@@ -11,15 +11,11 @@ import com.example.EcommerceSpring.repository.ProductRepository;
 import com.example.EcommerceSpring.entity.Category;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-
-
 @Service
 public class ProductService implements IProductService {
 
     private final ProductRepository repo;
     private final CategoryRepository categoryRepository;
-
 
     public ProductService(ProductRepository repo , CategoryRepository categoryRepository)
     {
@@ -41,7 +37,9 @@ public class ProductService implements IProductService {
         Category category = categoryRepository.findById(dto.getCategoryId())
                 .orElseThrow(() -> new CategoryNotFoundException("Category not found"));
 
-        Product saved = repo.save(ProductMapper.toEntity(dto , category));
+        Product productEntity = ProductMapper.toEntity(dto , category);
+
+        Product saved = repo.save(productEntity);
         return ProductMapper.toDto(saved);
     }
 

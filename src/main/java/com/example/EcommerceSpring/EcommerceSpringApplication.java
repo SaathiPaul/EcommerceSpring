@@ -18,5 +18,4 @@ public class EcommerceSpringApplication {
         );
         SpringApplication.run(EcommerceSpringApplication.class, args); // think as it starts the routing layer
 	}
-
 }

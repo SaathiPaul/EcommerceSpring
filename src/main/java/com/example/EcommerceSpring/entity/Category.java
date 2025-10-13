@@ -3,7 +3,6 @@ package com.example.EcommerceSpring.entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import lombok.*;
-
 import java.util.List;
 
 @Entity
@@ -12,7 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Category extends BaseEntity{
 
     @Column(nullable = false , unique = true)

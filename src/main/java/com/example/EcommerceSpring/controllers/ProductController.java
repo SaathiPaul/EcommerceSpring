@@ -20,7 +20,6 @@ public class ProductController {
         this.productService = productService;
     }
 
-
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) throws Exception {
 
