@@ -4,12 +4,14 @@ import com.example.EcommerceSpring.dto.CategoryDTO;
 import com.example.EcommerceSpring.entity.Category;
 import com.example.EcommerceSpring.mappers.CategoryMapper;
 import com.example.EcommerceSpring.repository.CategoryRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Primary
 @Service
 public class CategoryService implements ICategoryService{
 
@@ -25,6 +27,7 @@ public class CategoryService implements ICategoryService{
         {
             list.add(CategoryMapper.toDto(category));
         }
+        System.out.println(list);
         return list;
     }
 
