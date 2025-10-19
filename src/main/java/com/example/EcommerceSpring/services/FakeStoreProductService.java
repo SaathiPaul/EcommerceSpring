@@ -6,6 +6,8 @@ import com.example.EcommerceSpring.gateway.ICategoryGateway;
 import com.example.EcommerceSpring.gateway.IProductGateway;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FakeStoreProductService implements IProductService {
 
@@ -26,7 +28,7 @@ public class FakeStoreProductService implements IProductService {
         return null;
     }
 
-    public ProductWithCategoryDTO getProductWithCategory(Long id) throws Exception
+    public List<ProductWithCategoryDTO> getProductWithCategory() throws Exception
     {
         return null;
     }

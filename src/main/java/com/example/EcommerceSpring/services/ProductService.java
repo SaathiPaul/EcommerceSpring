@@ -11,6 +11,9 @@ import com.example.EcommerceSpring.repository.ProductRepository;
 import com.example.EcommerceSpring.entity.Category;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ProductService implements IProductService {
 
@@ -43,12 +46,19 @@ public class ProductService implements IProductService {
         return ProductMapper.toDto(saved);
     }
 
-
-    @Override
-    public ProductWithCategoryDTO getProductWithCategory(Long id) throws Exception
+    public List<ProductWithCategoryDTO> getProductWithCategory() throws Exception
     {
-        Product product = repo.findById(id)
-                .orElseThrow(() -> new Exception("Product not found"));
-        return ProductMapper.toProductWithCategoryDTO(product);
+        List<Product> product = repo.findAll();
+        if (product.isEmpty()) {
+            throw new Exception("Product not found");
+        }
+        List<ProductWithCategoryDTO> dtoList = new ArrayList<>();
+        for (Product p : product) {
+            dtoList.add(ProductMapper.toProductWithCategoryDTO(p));
+        }
+
+        return dtoList;
     }
+
+
 }

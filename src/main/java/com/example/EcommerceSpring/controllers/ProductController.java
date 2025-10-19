@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -35,11 +37,11 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<ProductWithCategoryDTO> getProductWithCategory(@PathVariable long id) throws Exception
+    public ResponseEntity<List<ProductWithCategoryDTO>> getProductWithCategory() throws Exception
     {
-        ProductWithCategoryDTO dto = productService.getProductWithCategory(id);
+        List<ProductWithCategoryDTO> dto = productService.getProductWithCategory();
         return ResponseEntity.ok(dto);
-    }
+    } //return list of all products 03:00 p.m. 19th oct 25.
 
 
     @ExceptionHandler(ProductNotFoundException.class)

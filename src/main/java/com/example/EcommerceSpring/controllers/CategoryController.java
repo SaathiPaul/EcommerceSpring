@@ -17,7 +17,7 @@ public class CategoryController {
         this.categoryService = _categoryService;
     }
 
-    @GetMapping
+    @GetMapping //("/{id}")
     public ResponseEntity<?> getAllCategoriesController(@RequestParam(required = false) String name) throws Exception
     {
         if(name != null && !name.isBlank())
@@ -34,8 +34,8 @@ public class CategoryController {
     @PostMapping
     public ResponseEntity<CategoryDTO> createCategory(@RequestBody CategoryDTO categoryDTO)
     {
-        CategoryDTO created = categoryService.createCategory(categoryDTO);
-        throw new UnsupportedOperationException("Method not implemented yet");
+        CategoryDTO created = categoryService.createCategory(categoryDTO); // name
+        return ResponseEntity.status(201).body(created);
     }
 
 }
